@@ -5,7 +5,7 @@ ui_print ""
 ui_print "  $(sed -n 's/^name=//p' "$MODPATH/module.prop")"
 ui_print "  ────────────────────"
 
-[ "$KSU" = true ] || abort "  KernelSU required"
+[ "${KSU:-}" = true ] || [ -n "${MAGISK_VER_CODE:-}" ] || abort "  KernelSU / Magisk required"
 [ "$(getprop ro.product.device)" = pudding ] || abort "  Unsupported device"
 
 SENSOR=/odm/lib64/camera/com.qti.sensormodule.pudding_sunny_ovx9500_wide_i.bin
