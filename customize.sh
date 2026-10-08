@@ -5,7 +5,6 @@ ui_print ""
 ui_print "  $(sed -n 's/^name=//p' "$MODPATH/module.prop")"
 ui_print "  ────────────────────"
 
-[ "${KSU:-}" = true ] || [ -n "${MAGISK_VER_CODE:-}" ] || abort "  KernelSU / Magisk required"
 [ "$(getprop ro.product.device)" = pudding ] || abort "  Unsupported device"
 
 SENSOR=/odm/lib64/camera/com.qti.sensormodule.pudding_sunny_ovx9500_wide_i.bin
@@ -22,6 +21,7 @@ HASH=$(sha256sum "$MODPATH/payload/sensormodule.bin") || abort "  Payload not fo
 grep -q '^[[:space:]]*VideoSizeCustom[[:space:]]*=' "$CONFIG" || abort "  Video settings not found"
 
 set_perm "$MODPATH/post-fs-data.sh" 0 0 0755
+set_perm "$MODPATH/action.sh" 0 0 0755
 set_perm "$MODPATH/payload/sensormodule.bin" 0 0 0644
 
 ui_print "  Ready. Reboot to apply."

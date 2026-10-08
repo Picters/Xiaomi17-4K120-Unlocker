@@ -1,3 +1,5 @@
 native-settings.txt
 native-settings.tmp
+boot.log
+boot.previous.log
 /dist/
