@@ -2,7 +2,7 @@
 
 # Xiaomi17 4K120
 
-KernelSU / ReSukiSU module by **Picters**.
+KernelSU / Magisk module.
 
 Adds 4K120 video recording to the stock Xiaomi 17 camera. Compatible with pudding and the supported sunny OVX9500 sensor table.
 
