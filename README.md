@@ -10,6 +10,6 @@ Tested only on HyperOS 3.0.315.0 CN (Android 16). Not tested on Android 17.
 
 ## Install
 
-[Download from releases](https://github.com/Picters/Xiaomi17-4K120FPS-Unlocker/releases), install it through your root manager and reboot.
+[Download from releases](https://github.com/Picters/Xiaomi17-4K120-Unlocker/releases), install it through your root manager and reboot.
 
 To restore stock, disable or remove the module and reboot.
